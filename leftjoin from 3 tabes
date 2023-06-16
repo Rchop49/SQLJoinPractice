@@ -1,0 +1,8 @@
+SELECT  b.Name, s.stuffp, round(e.ERA, 2) as ERA, s.IP, b.HardHitper
+FROM Battedballjune13 AS b
+LEFT JOIN stuffjun13 as s
+ON b.playerid = s.playerid
+LEFT join ERAjun6 as e
+ON b.playerid = e.playerid
+Where (s.ip > 50 AND s.Stuffp >99)
+ORDER by HardHitper DESC
